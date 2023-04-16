@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta>
+        <title></title>
+        <script src="https://unpkg.com/vue@3"></script>
+
+    
+
+    </head>
+
+    <body>
+
+        <div id="app">
+            <div >{{name}}</div>
+            <button @click ="change">değiştir</button>
+            <div>{{fullName}}</div>
+        </div>
+
+        <script>
+
+            const { createApp } = Vue
+
+            createApp({
+            data() {
+                return {
+                name :"sema",
+                surname:"ermin",
+            }
+
+            },
+            methods: {
+                change(){
+                    this.name= "mesaj değişti"
+                }
+                
+            },
+            computed:{
+                fullName(){
+                    return this.name + this.surname
+                }
+            }
+        }).mount('#app')
+        </script>
+
+    </body>
+</html>

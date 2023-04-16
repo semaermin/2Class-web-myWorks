@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #454545;
+}
+html{
+    height: 100%;
+    background: rgb(0,95,115);
+    background: linear-gradient(90deg, rgba(0,95,115,1) 0%, rgba(10,147,150,1) 100%);
+}
+.active{
+    background-color: #5DADE2 !important;
+    border-color: #5DADE2 !important;
+}
+.container{
+    height: 500px;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #EAEDED;
+    border-radius: 15px;
+    /* padding: 35px 20px; */
+    overflow-y: auto;
+}
+.content{
+     padding: 0 20px 35px 20px;
+}
+.content > .card:not(:first-child) {
+    margin-top: 20px;
+}
+.content h6 span{
+    opacity: .9;
+}
+.content .answers{
+    margin: 20px 0 15px 0;
+}
+.content .answers li{
+    cursor: pointer;
+}
+#result{
+    width: 150px;
+    height: 50px;
+    background-color: #48C9B0;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
