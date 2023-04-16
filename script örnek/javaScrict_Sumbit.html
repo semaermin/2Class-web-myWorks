@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<HEAD></HEAD>
+<HTML>
+    <HEAD>
+    </HEAD>
+    <SCRIPT>
+    var veri=false
+    function verikont (){
+    if (document.form1.kar.value.length == 5) {
+    return true}
+    else {
+    alert("TAM OLARAK 5 KARAKTER GİRİNİZ " + document.form1.kar.value +
+    " KARAKTER GEÇERLİ DEĞİL")
+    return false}
+    }
+    </SCRIPT>
+    <BODY bgColor="lightGreen">
+    <FONT FACE="Comic Sans MS">
+    <H2>OnSUBMIT UYGULAMASI</H4>
+    </FONT>
+    <FORM NAME="form1" onSubmit="return verikont()">
+    <B>5 KARAKTER GİRİNİZ:</B>
+    <INPUT TYPE="text" NAME="kar" SIZE=5>
+    <P><INPUT TYPE="submit" VALUE="KARAKTERLER GİRİLDİ" NAME="submit1" onClick="document.form1.kar.value=document.form1.kar.value.toUpperCase()">
+    </FORM>
+    </BODY>
+</HTML>

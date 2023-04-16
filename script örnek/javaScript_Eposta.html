@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+    <SCRIPT Language = "JavaScript">
+    function icerik(kar,lstring) {
+         val = false
+         for (var i=1;i<=lstring.length;i++) {
+              if (lstring.substring(i,i+1)==kar) {
+              val=true
+              break
+              }
+         }
+         return val
+    }
+    function verikontrol()
+    {
+         if (icerik("@",document.form1.eadres.value)) {
+              document.form1.submit()
+                       }
+         else {
+              alert("YAZDIĞINIZ BİR E-POSTA ADRESİNE BENZEMİYOR!")
+              return false
+         }
+    }
+    </SCRIPT>
+    <BODY bgColor="lightgreen">
+    <FONT FACE="Comic Sans MS">
+    <H3>E-POSTA ADRESİ KONTROLÜ</H3>
+    <FORM NAME="form1">
+    <B>e-mail ADRESİNİZİ GİRİNİZ:</B>
+         <INPUT TYPE="text" NAME="eadres"><P>
+         <INPUT TYPE="button" VALUE="GÖNDER" NAME="button1" onClick="verikontrol()">
+    </FORM>
+    </FONT>
+    </BODY>
+    </HTML>

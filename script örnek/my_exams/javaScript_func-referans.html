@@ -1,0 +1,49 @@
+//Değer ile fonksiyon çağırma
+
+<html>
+    <head>
+    <TITLE>İÇİNDEKİLER</TITLE>
+    </head>
+    <body bgColor="lightblue" text="darkblue">
+    <SCRIPT LANGUAGE="javaSCRIPT">
+    function hes1(a)
+    { a=a*5;
+    document.write("<H4>a= "+a+"</H4>");
+    }
+    var x=[3,6,9,12,15];
+    document.write("<H4>FONKSİYONU ÇAĞIRMADAN ÖNCE X DİZİSİ</H4>");
+    for( var b in x)
+    document.write("<H4>x["+b+"]= "+x[b]+"</H4>");
+    for (var i in x)
+    hes1(x[i]);
+    document.write("<H4>FONKSİYONU ÇAĞIRDIKTAN SONRA X DİZİSİ</H4>");
+    for( var b in x)
+    document.write("<H4>x["+b+"]= "+x[b]+"</H4>");
+    </SCRIPT>
+    </body>
+</html>
+
+<!--
+    Referans ile Çağırma tekniği
+    <html>
+        <head>
+        <TITLE>İÇİNDEKİLER</TITLE>
+            </head>
+        <body bgColor="lightblue" text="darkblue">
+        <SCRIPT LANGUAGE="javaSCRIPT">
+        function hes(y)
+        { for (var a in y)
+        y[a]=y[a]-4;
+        }
+        var x=[3,6,9,12,15];
+        document.write("<H4>FONKSİYONU ÇAĞIRMADAN ÖNCE X DİZİSİ</H4>");
+        for( var b in x)
+        document.write("<H4>x["+b+"]= "+x[b]+"</H4>");
+        hes(x);
+        document.write("<H4>FONKSİYONU ÇAĞIRDIKTAN SONRA X DİZİSİ</H4>");
+        for( var b in x)
+        document.write("<H4>x["+b+"]= "+x[b]+"</H4>");
+        </SCRIPT>
+        </body>
+    </html
+-->

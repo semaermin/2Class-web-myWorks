@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CANLANDIRMA ÖRNEĞİ</title>
+    </head>
+    <body BGCOLOR="lightgreen" TEXT="darkred"><center>
+        <font FACE="Comic Sans MS">
+        <script LANGUAGE="JScript">
+            var sayac=1;
+            /* bir dizi oluştur ve gif türü dosya adlarını buna yükle
+            her gif türü dosya adı 1-6 arasındaa rakamlardan oluşuyor.
+            */
+            resim=["1","2","3","4"];
+            dizi = new Array();
+            for (i=1;i<7;i++){
+                dizi[i]=new Image();
+                dizi[i].src= i + ".jpg";
+            }
+            function basla(){
+                // 6 çevrim sonra sayacı tekrar 1 yap
+                if (sayac == 6 )
+                    sayac = 1;
+                else
+                    sayac ++;
+                document.resim.src=dizi[sayac].src;
+                /* aşağıdaki fonksiyon basla fonksiyonunu her 80 ms. de bir çağırır
+                */
+                sdur=setTimeout("basla()",1000);
+            }
+            function dur(){
+                clearTimeout(sdur);
+                // başlangıç resmini ata
+                document.resim.src=dizi[1].src;
+            }
+        </script>
+        <p><b>BASİT BİR CANLANDIRMA</b>
+        <p><img SRC="1.gif" WIDTH="200" NAME="resim" HEIGHT="80" BORDER="2" ALIGN="bottom">
+        <form>
+            <input TYPE="button" NAME="button1" value="BASLA" onClick="basla()">
+            <input TYPE="button" NAME="button2" value="SON" onClick="dur()" CHECKED>
+        </form>
+    </body>
+</html>

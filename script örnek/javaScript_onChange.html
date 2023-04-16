@@ -1,0 +1,21 @@
+<HTML>
+    <HEAD></HEAD>
+    <BODY bgColor="lightblue" fgColor="red">
+    <FONT FACE="Comic Sans MS">
+    <H3>ARAMA</H3>
+    <SCRIPT>
+    function sec(s) {
+    return s.options[s.selectedIndex].value
+    }
+    </SCRIPT>
+    <FORM>
+    <SELECT NAME="list" SIZE=1 OnChange="location=sec(this)">
+    <OPTION value="#"> BİR ARAMA MOTORU SEÇİNİZ
+    <OPTION value="http://www.google.com"> Google
+    <OPTION value="http://www.yahoo.com"> Yahoo
+    <OPTION value="http://www.yandex.com"> Yandex
+    </SELECT>
+    </FORM>
+    </FONT>
+    </BODY>
+</HTML>

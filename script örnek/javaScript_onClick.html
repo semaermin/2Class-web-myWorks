@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+    <TITLE>confirm diyalog kutusu</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+    
+    function kontrol(){
+    // Onay kutusundaki stringe ilk değer ataması
+    str="Geleceği Yazanlar Web sayfasına erişmek istiyor musunuz ?";
+    /* Kullanıcı OK düğmesini tıklarsa if deyimi koşulu true olacaktır
+    ve belirlenen hedefe gidilecektir.
+    Aşağıdaki ifade yerine,
+    if (confirm(str)==true) ifadesi ya da
+    if (confirm(str)==1) ifadesi de kullanılabilirdi.
+    */
+    if (confirm(str)){
+    // Aktif sayfanın URL'ini değiştirir.
+    location.href="http://www.gelecegiyazanlar.org";
+    } // end if
+    } // end function
+    //-->
+    </SCRIPT>
+    </HEAD>
+    <BODY BGCOLOR="pink">
+    <FONT FACE="Comic Sans MS" >
+    <CENTER>
+    <P><B>ONAY(confirm) DİYALOG KUTUSU ÖRNEĞİ</B>
+    <P>
+    <FORM>
+    <INPUT TYPE="button" VALUE=" GELECEĞİ YAZANLAR ANA SAYFASI" onClick="kontrol()">
+    </FORM>
+    </FONT>
+    </BODY>
+</HTML>

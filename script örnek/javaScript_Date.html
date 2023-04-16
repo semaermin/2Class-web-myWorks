@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+     <head>
+     <title>TARİH(Date)ÖRNEĞİ</title>
+     </head>
+     <body  bgColor="lightgreen">
+<FONT FACE="Comic Sans MS">
+     <script>
+ 
+      var suan = new Date();
+      var ayAd = suan.getMonth() + 1;  // getMonth Ayı 0 to 11 aralığında verir
+      var gunAd = suan.getDay() + 1;    // getDay Günü  0 to 6  aralığında verir  
+      document.write("<H3>"+suan+"<H3>");
+      /* suan.getDate() - Ayın günü = 1 to 31
+            gün no 10'dan küçükse önüne sıfır koy
+           */
+        if  (suan.getDate()<10)
+       GunNo = "0" + suan.getDate();
+        else
+            GunNo = suan.getDate();
+      if(gunAd==1) Gun = "Pazar,";
+      if(gunAd==2) Gun = "Pazartesi,";
+      if(gunAd==3) Gun = "Salı";
+      if(gunAd==4) Gun = "Çarşamba";
+      if(gunAd==5) Gun = "Perşembe";
+      if(gunAd==6) Gun = "Cuma";
+      if(gunAd==7) Gun = "Cumartesi";
+      if(ayAd==1) Ay="Ocak";
+      if(ayAd==2) Ay="Şubat";
+      if(ayAd==3) Ay="Mart";
+      if(ayAd==4) Ay="Nisan";
+      if(ayAd==5) Ay="Mayıs";
+      if(ayAd==6) Ay="Haziran";
+      if(ayAd==7) Ay="Temmuz";
+      if(ayAd==8) Ay="Ağustos";
+      if(ayAd==9) Ay="Eylül";
+      if(ayAd==10) Ay="Ekim";
+      if(ayAd==11) Ay="Kasım";
+      if(ayAd==12) Ay="Aralık";
+      // o anki tarihi temsil eden stringi oluştur
+      var buGunTar =(" " + GunNo + " " + Ay + " " + Gun );
+      // tarihi sayfaya yaz
+      document.open();
+      document.write("<font size=+1  ><b> BUGÜN :  "+buGunTar+" </b></font>");
+      //  javascript  sonu-->
+      </script>
+     </body>
+     </html>
